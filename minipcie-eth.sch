@@ -1,0 +1,614 @@
+EESchema Schematic File Version 3
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:win
+LIBS:freetronics_schematic
+LIBS:mpcie
+LIBS:si3406
+LIBS:minipcie-eth-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L VoCore_v2 U?
+U 1 1 5BAF0D89
+P 5710 3930
+F 0 "U?" H 6820 5140 50  0000 C CNN
+F 1 "VoCore_v2" H 6670 5230 50  0000 C CNN
+F 2 "MODULE" H 5710 3580 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5710 3480 50  0001 C CNN
+	1    5710 3930
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1860 3210 840  1280
+U 5BAF0E8B
+F0 "ethernet + POE" 60
+F1 "ethernet.sch" 60
+F2 "P0RN" I R 2700 3580 60 
+F3 "P0RP" I R 2700 3480 60 
+F4 "P0TP" I R 2700 3680 60 
+F5 "P0TN" I R 2700 3780 60 
+F6 "VP_RJ45" I L 1860 4200 60 
+F7 "VN_RJ45" I L 1860 4320 60 
+F8 "GND_RJ45" I R 2700 3280 60 
+$EndSheet
+$Sheet
+S 1150 6140 1550 1200
+U 5BAF0F57
+F0 "sdcard" 60
+F1 "sdcard.sch" 60
+$EndSheet
+$Sheet
+S 4510 1050 2510 820 
+U 5BAF0FB4
+F0 "minipcie" 60
+F1 "minipcie.sch" 60
+F2 "USB_D+" I B 6860 1870 60 
+F3 "USB_D-" I B 6700 1870 60 
+F4 "VCC3V3" I B 4580 1870 60 
+F5 "TX_LED" I T 4690 1050 60 
+F6 "RX_LED" I T 4820 1050 60 
+F7 "MCU_PROG" I B 5820 1870 60 
+F8 "GND" I B 4680 1870 60 
+F9 "MCU_RESET" I B 5720 1870 60 
+F10 "RF_KILL" I B 6560 1870 60 
+F11 "SWD_IO" I B 6430 1870 60 
+F12 "SWD_CLK" I B 6280 1870 60 
+F13 "SPI_CLK" I B 5030 1870 60 
+F14 "SPI_MISO" I B 5140 1870 60 
+F15 "SPI_MOSI" I B 5240 1870 60 
+F16 "SPI_CS" I B 4920 1870 60 
+$EndSheet
+$Comp
+L Conn_01x04 J?
+U 1 1 5BAF1493
+P 3570 4370
+F 0 "J?" H 3490 3945 50  0000 C CNN
+F 1 "UART2" H 3490 4036 50  0000 C CNN
+F 2 "" H 3570 4370 50  0001 C CNN
+F 3 "" H 3570 4370 50  0001 C CNN
+	1    3570 4370
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BAF1546
+P 6520 5530
+F 0 "#PWR?" H 6520 5280 50  0001 C CNN
+F 1 "GND" H 6525 5357 50  0000 C CNN
+F 2 "" H 6520 5530 50  0001 C CNN
+F 3 "" H 6520 5530 50  0001 C CNN
+	1    6520 5530
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BAF157A
+P 5060 5380
+F 0 "#PWR?" H 5060 5130 50  0001 C CNN
+F 1 "GND" V 5065 5252 50  0000 R CNN
+F 2 "" H 5060 5380 50  0001 C CNN
+F 3 "" H 5060 5380 50  0001 C CNN
+	1    5060 5380
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BAF158B
+P 8080 4530
+F 0 "#PWR?" H 8080 4280 50  0001 C CNN
+F 1 "GND" H 8085 4357 50  0000 C CNN
+F 2 "" H 8080 4530 50  0001 C CNN
+F 3 "" H 8080 4530 50  0001 C CNN
+	1    8080 4530
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BAF15B1
+P 4830 2440
+F 0 "#PWR?" H 4830 2190 50  0001 C CNN
+F 1 "GND" H 4835 2267 50  0000 C CNN
+F 2 "" H 4830 2440 50  0001 C CNN
+F 3 "" H 4830 2440 50  0001 C CNN
+	1    4830 2440
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5BAF166D
+P 6160 5530
+F 0 "#PWR?" H 6160 5380 50  0001 C CNN
+F 1 "+5V" H 6175 5703 50  0000 C CNN
+F 2 "" H 6160 5530 50  0001 C CNN
+F 3 "" H 6160 5530 50  0001 C CNN
+	1    6160 5530
+	-1   0    0    1   
+$EndComp
+NoConn ~ 7160 4630
+$Comp
+L Conn_02x08_Odd_Even J?
+U 1 1 5BAF1E64
+P 8630 4030
+F 0 "J?" H 8680 4547 50  0000 C CNN
+F 1 "GPIO" H 8680 4456 50  0000 C CNN
+F 2 "" H 8630 4030 50  0001 C CNN
+F 3 "" H 8630 4030 50  0001 C CNN
+	1    8630 4030
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5BAF2AC1
+P 3770 4470
+F 0 "#PWR?" H 3770 4320 50  0001 C CNN
+F 1 "+5V" H 3785 4643 50  0000 C CNN
+F 2 "" H 3770 4470 50  0001 C CNN
+F 3 "" H 3770 4470 50  0001 C CNN
+	1    3770 4470
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BAF2AD4
+P 3770 4170
+F 0 "#PWR?" H 3770 3920 50  0001 C CNN
+F 1 "GND" H 3775 3997 50  0000 C CNN
+F 2 "" H 3770 4170 50  0001 C CNN
+F 3 "" H 3770 4170 50  0001 C CNN
+	1    3770 4170
+	-1   0    0    1   
+$EndComp
+NoConn ~ 4260 4180
+NoConn ~ 4260 4080
+NoConn ~ 4260 4280
+NoConn ~ 4260 4380
+NoConn ~ 4260 4480
+NoConn ~ 4260 4580
+NoConn ~ 4260 3380
+NoConn ~ 5760 5380
+Text Notes 8580 3160 0    60   ~ 0
+PINS 39, 40, 41 are \nETH PHY LED GPIOs \naccording\nto Mediatek 7688AN\ndatasheet
+Text Notes 4580 3020 0    60   ~ 0
+100mA max
+Text Notes 9640 6810 2    60   ~ 0
+MiniPCIe breakout (n-fuse and RAK833 LoRa gateways)\n… perhaps other devices too
+Text Notes 5850 4370 0    60   ~ 0
+100mA max *
+NoConn ~ 5660 2480
+NoConn ~ 5760 2480
+NoConn ~ 5860 2480
+NoConn ~ 6260 2480
+NoConn ~ 4260 3180
+NoConn ~ 4260 3280
+Wire Wire Line
+	6060 5380 6160 5380
+Wire Wire Line
+	6160 5380 6160 5530
+Wire Wire Line
+	6260 5380 6520 5380
+Wire Wire Line
+	6520 5380 6520 5530
+Connection ~ 6360 5380
+Wire Wire Line
+	5160 2300 5160 2480
+Wire Wire Line
+	5160 2390 4830 2390
+Wire Wire Line
+	4830 2390 4830 2440
+Wire Wire Line
+	7160 4430 7160 4530
+Wire Wire Line
+	7270 4530 8240 4530
+Wire Wire Line
+	8240 4530 8240 4610
+Wire Wire Line
+	8240 4610 9050 4610
+Wire Wire Line
+	8930 4610 8930 4430
+Wire Wire Line
+	8430 4430 7230 4430
+Wire Wire Line
+	7230 4430 7230 4330
+Wire Wire Line
+	7230 4330 7160 4330
+Wire Wire Line
+	7160 4230 7310 4230
+Wire Wire Line
+	7310 4230 7310 4330
+Wire Wire Line
+	7310 4330 8430 4330
+Wire Wire Line
+	7160 4130 7390 4130
+Wire Wire Line
+	7390 4130 7390 4230
+Wire Wire Line
+	7390 4230 8430 4230
+Wire Wire Line
+	7160 4030 8430 4030
+Wire Wire Line
+	8430 3930 8080 3930
+Wire Wire Line
+	8080 3930 8080 4530
+Connection ~ 8080 4530
+Wire Wire Line
+	8430 4130 8180 4130
+Wire Wire Line
+	8180 4130 8180 4530
+Connection ~ 8180 4530
+Wire Wire Line
+	8430 3830 7970 3830
+Wire Wire Line
+	7970 3830 7970 3930
+Wire Wire Line
+	7970 3930 7160 3930
+Wire Wire Line
+	8430 3730 7880 3730
+Wire Wire Line
+	7880 3730 7880 3830
+Wire Wire Line
+	7880 3830 7160 3830
+Wire Wire Line
+	8930 4330 9050 4330
+Wire Wire Line
+	9050 4610 9050 4030
+Connection ~ 8930 4610
+Wire Wire Line
+	7160 3730 7790 3730
+Wire Wire Line
+	7790 3730 7790 3420
+Wire Wire Line
+	7790 3420 8930 3420
+Wire Wire Line
+	8930 3420 8930 3730
+Wire Wire Line
+	7160 3630 7700 3630
+Wire Wire Line
+	7700 3630 7700 3310
+Wire Wire Line
+	7700 3310 9020 3310
+Wire Wire Line
+	9020 3310 9020 3830
+Wire Wire Line
+	9020 3830 8930 3830
+Wire Wire Line
+	7160 3530 7620 3530
+Wire Wire Line
+	7620 3530 7620 3210
+Wire Wire Line
+	7620 3210 9100 3210
+Wire Wire Line
+	9100 3210 9100 3930
+Wire Wire Line
+	9100 3930 8930 3930
+Wire Wire Line
+	9050 4230 8930 4230
+Connection ~ 9050 4330
+Wire Wire Line
+	9050 4130 8930 4130
+Connection ~ 9050 4230
+Wire Wire Line
+	9050 4030 8930 4030
+Connection ~ 9050 4130
+Wire Wire Line
+	7160 3330 7470 3330
+Wire Wire Line
+	7160 3430 7550 3430
+Wire Wire Line
+	4260 3980 4120 3980
+Wire Wire Line
+	4120 3980 4120 4370
+Wire Wire Line
+	4120 4370 3770 4370
+Wire Wire Line
+	4260 3880 4050 3880
+Wire Wire Line
+	4050 3880 4050 4270
+Wire Wire Line
+	4050 4270 3770 4270
+Wire Wire Line
+	5860 5380 5860 5950
+Wire Wire Line
+	4260 4680 1790 4680
+Wire Wire Line
+	1790 4680 1790 6080
+Wire Wire Line
+	4260 4780 1880 4780
+Wire Wire Line
+	1880 4780 1880 6060
+Wire Wire Line
+	5660 5380 5660 5840
+Wire Wire Line
+	5660 5840 2600 5840
+Wire Wire Line
+	2600 5840 2600 6080
+Wire Wire Line
+	5560 5380 5560 5780
+Wire Wire Line
+	5560 5780 2510 5780
+Wire Wire Line
+	2510 5780 2510 6080
+Wire Wire Line
+	5460 5380 5460 5730
+Wire Wire Line
+	5460 5730 2430 5730
+Wire Wire Line
+	2430 5730 2430 6080
+Wire Wire Line
+	5360 5380 5360 5670
+Wire Wire Line
+	5360 5670 2370 5670
+Wire Wire Line
+	2370 5670 2370 6090
+Wire Wire Line
+	5260 5380 5260 5600
+Wire Wire Line
+	5260 5600 2300 5600
+Wire Wire Line
+	2300 5600 2300 6080
+Wire Wire Line
+	5160 5380 5160 5530
+Wire Wire Line
+	5160 5530 2220 5530
+Wire Wire Line
+	2220 5530 2220 6080
+Wire Wire Line
+	2700 3480 4260 3480
+Wire Wire Line
+	2700 3580 4260 3580
+Wire Wire Line
+	2700 3680 4260 3680
+Wire Wire Line
+	2700 3780 4260 3780
+Wire Wire Line
+	5860 5950 9940 5950
+Wire Wire Line
+	9940 5950 9940 2120
+Wire Wire Line
+	9940 2120 6860 2120
+Wire Wire Line
+	6860 2120 6860 1870
+Wire Wire Line
+	5960 5380 5960 5850
+Wire Wire Line
+	5960 5850 9860 5850
+Wire Wire Line
+	9860 5850 9860 2220
+Wire Wire Line
+	9860 2220 6700 2220
+Wire Wire Line
+	6700 2220 6700 1870
+Wire Wire Line
+	5160 2300 4680 2300
+Wire Wire Line
+	4680 2300 4680 1870
+Connection ~ 5160 2390
+Wire Wire Line
+	5260 2480 5260 2150
+Wire Wire Line
+	5260 2150 4920 2150
+Wire Wire Line
+	4920 2150 4920 1870
+Wire Wire Line
+	5360 2480 5360 2080
+Wire Wire Line
+	5360 2080 5030 2080
+Wire Wire Line
+	5030 2080 5030 1870
+Wire Wire Line
+	5460 2480 5460 2000
+Wire Wire Line
+	5460 2000 5140 2000
+Wire Wire Line
+	5140 2000 5140 1870
+Wire Wire Line
+	5560 2480 5560 1950
+Wire Wire Line
+	5560 1950 5240 1950
+Wire Wire Line
+	5240 1950 5240 1870
+Wire Wire Line
+	7470 3330 7470 2390
+Wire Wire Line
+	7470 2390 5720 2390
+Wire Wire Line
+	5720 2390 5720 1870
+Wire Wire Line
+	7550 3430 7550 2320
+Wire Wire Line
+	7550 2320 5820 2320
+Wire Wire Line
+	5820 2320 5820 1870
+Wire Wire Line
+	5960 2480 5960 2060
+Wire Wire Line
+	5960 2060 6280 2060
+Wire Wire Line
+	6280 2060 6280 1870
+Wire Wire Line
+	6060 2480 6060 2120
+Wire Wire Line
+	6060 2120 6430 2120
+Wire Wire Line
+	6430 2120 6430 1870
+Wire Wire Line
+	6160 2480 6160 2230
+Wire Wire Line
+	6160 2230 6560 2230
+Wire Wire Line
+	6560 2230 6560 1870
+Text Notes 1220 6540 0    60   ~ 0
+XXX: Can we avoid having to use external SD \ncard by compiling small enough OpenWRT \nthat just fits inside the VoCore2 memory?
+Text Notes 7480 2490 0    60   ~ 0
+XXX: Review reset state for this line.
+Text Notes 550  3080 0    60   ~ 0
+XXX: How to best handle the two power rails: 5V and 3.3V?
+$Comp
+L LED_Small_ALT D?
+U 1 1 5BB77A38
+P 3480 2400
+F 0 "D?" V 3526 2332 50  0000 R CNN
+F 1 "RX" V 3435 2332 50  0000 R CNN
+F 2 "" V 3480 2400 50  0001 C CNN
+F 3 "" V 3480 2400 50  0001 C CNN
+	1    3480 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED_Small_ALT D?
+U 1 1 5BB77A74
+P 3740 2390
+F 0 "D?" V 3786 2322 50  0000 R CNN
+F 1 "TX" V 3695 2322 50  0000 R CNN
+F 2 "" V 3740 2390 50  0001 C CNN
+F 3 "" V 3740 2390 50  0001 C CNN
+	1    3740 2390
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED_Small_ALT D?
+U 1 1 5BB77AA6
+P 3990 2400
+F 0 "D?" V 4036 2332 50  0000 R CNN
+F 1 "PWR" V 3945 2332 50  0000 R CNN
+F 2 "" V 3990 2400 50  0001 C CNN
+F 3 "" V 3990 2400 50  0001 C CNN
+	1    3990 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R_Network04 RN?
+U 1 1 5BB77E7E
+P 3580 2830
+F 0 "RN?" H 3300 2784 50  0000 R CNN
+F 1 "LEDS" H 3300 2875 50  0000 R CNN
+F 2 "Resistors_THT:R_Array_SIP5" V 3855 2830 50  0001 C CNN
+F 3 "" H 3580 2830 50  0001 C CNN
+	1    3580 2830
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BB7822B
+P 3780 3030
+F 0 "#PWR?" H 3780 2780 50  0001 C CNN
+F 1 "GND" H 3785 2857 50  0000 C CNN
+F 2 "" H 3780 3030 50  0001 C CNN
+F 3 "" H 3780 3030 50  0001 C CNN
+	1    3780 3030
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4260 3080 4260 2230
+Wire Wire Line
+	4260 2230 3990 2230
+Wire Wire Line
+	3990 2230 3990 2300
+Wire Wire Line
+	3780 2630 3780 2570
+Wire Wire Line
+	3780 2570 3990 2570
+Wire Wire Line
+	3990 2570 3990 2500
+Wire Wire Line
+	4690 1050 4690 1010
+Wire Wire Line
+	4690 1010 3740 1010
+Wire Wire Line
+	3740 1010 3740 2290
+Wire Wire Line
+	3740 2490 3740 2580
+Wire Wire Line
+	3740 2580 3680 2580
+Wire Wire Line
+	3680 2580 3680 2630
+Wire Wire Line
+	4820 1050 4820 870 
+Wire Wire Line
+	4820 870  3480 870 
+Wire Wire Line
+	3480 870  3480 2300
+Wire Wire Line
+	3480 2500 3480 2550
+Wire Wire Line
+	3480 2550 3580 2550
+Wire Wire Line
+	3580 2550 3580 2630
+NoConn ~ 3480 2630
+$Comp
+L GND #PWR?
+U 1 1 5BC0BA99
+P 3030 3280
+F 0 "#PWR?" H 3030 3030 50  0001 C CNN
+F 1 "GND" H 3190 3340 50  0000 R CNN
+F 2 "" H 3030 3280 50  0001 C CNN
+F 3 "" H 3030 3280 50  0001 C CNN
+	1    3030 3280
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3030 3280 2700 3280
+Wire Wire Line
+	7270 4530 7270 4480
+Wire Wire Line
+	7270 4480 7160 4480
+Connection ~ 7160 4480
+$Comp
+L GND #PWR?
+U 1 1 5BC0D564
+P 7300 3040
+F 0 "#PWR?" H 7300 2790 50  0001 C CNN
+F 1 "GND" H 7305 2867 50  0000 C CNN
+F 2 "" H 7300 3040 50  0001 C CNN
+F 3 "" H 7300 3040 50  0001 C CNN
+	1    7300 3040
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7160 3230 7210 3230
+Wire Wire Line
+	7210 3230 7210 2990
+Wire Wire Line
+	7210 2990 7300 2990
+Wire Wire Line
+	7300 2990 7300 3040
+$EndSCHEMATC
