@@ -32,6 +32,9 @@ LIBS:win
 LIBS:freetronics_schematic
 LIBS:mpcie
 LIBS:si3406
+LIBS:si3404
+LIBS:SI-52003-F
+LIBS:ap2112
 LIBS:minipcie-eth-cache
 EELAYER 26 0
 EELAYER END
@@ -67,9 +70,12 @@ F2 "P0RN" I R 2700 3580 60
 F3 "P0RP" I R 2700 3480 60 
 F4 "P0TP" I R 2700 3680 60 
 F5 "P0TN" I R 2700 3780 60 
-F6 "VP_RJ45" I L 1860 4200 60 
-F7 "VN_RJ45" I L 1860 4320 60 
-F8 "GND_RJ45" I R 2700 3280 60 
+F6 "5V+_POE" I L 1860 4210 60 
+F7 "5V-_POE" I L 1860 4330 60 
+F8 "LED1" I R 2700 4010 60 
+F9 "LED2" I R 2700 4150 60 
+F10 "3V3+_POE" I L 1860 3290 60 
+F11 "3V3-_POE" I L 1860 3400 60 
 $EndSheet
 $Sheet
 S 1150 6140 1550 1200
@@ -101,12 +107,12 @@ $EndSheet
 $Comp
 L Conn_01x04 J?
 U 1 1 5BAF1493
-P 3570 4370
-F 0 "J?" H 3490 3945 50  0000 C CNN
-F 1 "UART2" H 3490 4036 50  0000 C CNN
-F 2 "" H 3570 4370 50  0001 C CNN
-F 3 "" H 3570 4370 50  0001 C CNN
-	1    3570 4370
+P 3770 4370
+F 0 "J?" H 3890 4560 50  0000 C CNN
+F 1 "UART2" H 3960 4480 50  0000 C CNN
+F 2 "" H 3770 4370 50  0001 C CNN
+F 3 "" H 3770 4370 50  0001 C CNN
+	1    3770 4370
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -134,12 +140,12 @@ $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5BAF158B
-P 8080 4530
-F 0 "#PWR?" H 8080 4280 50  0001 C CNN
-F 1 "GND" H 8085 4357 50  0000 C CNN
-F 2 "" H 8080 4530 50  0001 C CNN
-F 3 "" H 8080 4530 50  0001 C CNN
-	1    8080 4530
+P 8120 4740
+F 0 "#PWR?" H 8120 4490 50  0001 C CNN
+F 1 "GND" H 8125 4567 50  0000 C CNN
+F 2 "" H 8120 4740 50  0001 C CNN
+F 3 "" H 8120 4740 50  0001 C CNN
+	1    8120 4740
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -179,23 +185,23 @@ $EndComp
 $Comp
 L +5V #PWR?
 U 1 1 5BAF2AC1
-P 3770 4470
-F 0 "#PWR?" H 3770 4320 50  0001 C CNN
-F 1 "+5V" H 3785 4643 50  0000 C CNN
-F 2 "" H 3770 4470 50  0001 C CNN
-F 3 "" H 3770 4470 50  0001 C CNN
-	1    3770 4470
+P 3970 4470
+F 0 "#PWR?" H 3970 4320 50  0001 C CNN
+F 1 "+5V" H 3985 4643 50  0000 C CNN
+F 2 "" H 3970 4470 50  0001 C CNN
+F 3 "" H 3970 4470 50  0001 C CNN
+	1    3970 4470
 	-1   0    0    1   
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5BAF2AD4
-P 3770 4170
-F 0 "#PWR?" H 3770 3920 50  0001 C CNN
-F 1 "GND" H 3775 3997 50  0000 C CNN
-F 2 "" H 3770 4170 50  0001 C CNN
-F 3 "" H 3770 4170 50  0001 C CNN
-	1    3770 4170
+P 3970 4170
+F 0 "#PWR?" H 3970 3920 50  0001 C CNN
+F 1 "GND" H 3975 3997 50  0000 C CNN
+F 2 "" H 3970 4170 50  0001 C CNN
+F 3 "" H 3970 4170 50  0001 C CNN
+	1    3970 4170
 	-1   0    0    1   
 $EndComp
 NoConn ~ 4260 4180
@@ -206,7 +212,7 @@ NoConn ~ 4260 4480
 NoConn ~ 4260 4580
 NoConn ~ 4260 3380
 NoConn ~ 5760 5380
-Text Notes 8580 3160 0    60   ~ 0
+Text Notes 8440 3360 0    60   ~ 0
 PINS 39, 40, 41 are \nETH PHY LED GPIOs \naccording\nto Mediatek 7688AN\ndatasheet
 Text Notes 4580 3020 0    60   ~ 0
 100mA max
@@ -225,32 +231,38 @@ Wire Wire Line
 Wire Wire Line
 	6160 5380 6160 5530
 Wire Wire Line
-	6260 5380 6520 5380
+	6260 5380 6360 5380
+Wire Wire Line
+	6360 5380 6520 5380
 Wire Wire Line
 	6520 5380 6520 5530
 Connection ~ 6360 5380
 Wire Wire Line
-	5160 2300 5160 2480
+	5160 2300 5160 2390
+Wire Wire Line
+	5160 2390 5160 2480
 Wire Wire Line
 	5160 2390 4830 2390
 Wire Wire Line
 	4830 2390 4830 2440
 Wire Wire Line
-	7160 4430 7160 4530
+	7160 4430 7160 4480
 Wire Wire Line
-	7270 4530 8240 4530
+	7160 4480 7160 4530
+Wire Wire Line
+	7270 4530 8120 4530
+Wire Wire Line
+	8120 4530 8180 4530
+Wire Wire Line
+	8180 4530 8240 4530
 Wire Wire Line
 	8240 4530 8240 4610
 Wire Wire Line
-	8240 4610 9050 4610
+	8240 4610 8930 4610
+Wire Wire Line
+	8930 4610 9050 4610
 Wire Wire Line
 	8930 4610 8930 4430
-Wire Wire Line
-	8430 4430 7230 4430
-Wire Wire Line
-	7230 4430 7230 4330
-Wire Wire Line
-	7230 4330 7160 4330
 Wire Wire Line
 	7160 4230 7310 4230
 Wire Wire Line
@@ -266,58 +278,48 @@ Wire Wire Line
 Wire Wire Line
 	7160 4030 8430 4030
 Wire Wire Line
-	8430 3930 8080 3930
+	8430 3930 8120 3930
 Wire Wire Line
-	8080 3930 8080 4530
-Connection ~ 8080 4530
+	8120 3930 8120 4530
+Wire Wire Line
+	8120 4530 8120 4740
+Connection ~ 8120 4530
 Wire Wire Line
 	8430 4130 8180 4130
 Wire Wire Line
 	8180 4130 8180 4530
 Connection ~ 8180 4530
 Wire Wire Line
-	8430 3830 7970 3830
+	8430 3830 8080 3830
 Wire Wire Line
-	7970 3830 7970 3930
+	8080 3830 8080 3930
 Wire Wire Line
-	7970 3930 7160 3930
+	8080 3930 7160 3930
 Wire Wire Line
-	8430 3730 7880 3730
+	8430 3730 8040 3730
 Wire Wire Line
-	7880 3730 7880 3830
+	8040 3730 8040 3830
 Wire Wire Line
-	7880 3830 7160 3830
+	8040 3830 7160 3830
 Wire Wire Line
 	8930 4330 9050 4330
 Wire Wire Line
-	9050 4610 9050 4030
+	9050 4610 9050 4330
+Wire Wire Line
+	9050 4330 9050 4230
+Wire Wire Line
+	9050 4230 9050 4130
+Wire Wire Line
+	9050 4130 9050 4030
 Connection ~ 8930 4610
-Wire Wire Line
-	7160 3730 7790 3730
-Wire Wire Line
-	7790 3730 7790 3420
-Wire Wire Line
-	7790 3420 8930 3420
-Wire Wire Line
-	8930 3420 8930 3730
-Wire Wire Line
-	7160 3630 7700 3630
-Wire Wire Line
-	7700 3630 7700 3310
-Wire Wire Line
-	7700 3310 9020 3310
-Wire Wire Line
-	9020 3310 9020 3830
-Wire Wire Line
-	9020 3830 8930 3830
 Wire Wire Line
 	7160 3530 7620 3530
 Wire Wire Line
-	7620 3530 7620 3210
+	7620 3530 7620 3440
 Wire Wire Line
-	7620 3210 9100 3210
+	7620 3440 9100 3440
 Wire Wire Line
-	9100 3210 9100 3930
+	9100 3440 9100 3930
 Wire Wire Line
 	9100 3930 8930 3930
 Wire Wire Line
@@ -338,13 +340,13 @@ Wire Wire Line
 Wire Wire Line
 	4120 3980 4120 4370
 Wire Wire Line
-	4120 4370 3770 4370
+	4120 4370 3970 4370
 Wire Wire Line
 	4260 3880 4050 3880
 Wire Wire Line
 	4050 3880 4050 4270
 Wire Wire Line
-	4050 4270 3770 4270
+	4050 4270 3970 4270
 Wire Wire Line
 	5860 5380 5860 5950
 Wire Wire Line
@@ -476,12 +478,10 @@ Wire Wire Line
 	6160 2230 6560 2230
 Wire Wire Line
 	6560 2230 6560 1870
-Text Notes 1220 6540 0    60   ~ 0
-XXX: Can we avoid having to use external SD \ncard by compiling small enough OpenWRT \nthat just fits inside the VoCore2 memory?
-Text Notes 7480 2490 0    60   ~ 0
-XXX: Review reset state for this line.
-Text Notes 550  3080 0    60   ~ 0
-XXX: How to best handle the two power rails: 5V and 3.3V?
+Text Notes 2770 6740 0    60   ~ 0
+XXX: Can we avoid having to use external SD \ncard by compiling small enough OpenWRT \nthat just fits inside the VoCore2 memory?\n\nLess power consumption and less filesystem errors.
+Text Notes 7580 2490 0    60   ~ 0
+XXX: Review reset state for those two lines.\npull-up/pull-down accordingly.
 $Comp
 L LED_Small_ALT D?
 U 1 1 5BB77A38
@@ -520,7 +520,7 @@ L R_Network04 RN?
 U 1 1 5BB77E7E
 P 3580 2830
 F 0 "RN?" H 3300 2784 50  0000 R CNN
-F 1 "LEDS" H 3300 2875 50  0000 R CNN
+F 1 "RN_LEDS" H 3300 2875 50  0000 R CNN
 F 2 "Resistors_THT:R_Array_SIP5" V 3855 2830 50  0001 C CNN
 F 3 "" H 3580 2830 50  0001 C CNN
 	1    3580 2830
@@ -574,19 +574,6 @@ Wire Wire Line
 Wire Wire Line
 	3580 2550 3580 2630
 NoConn ~ 3480 2630
-$Comp
-L GND #PWR?
-U 1 1 5BC0BA99
-P 3030 3280
-F 0 "#PWR?" H 3030 3030 50  0001 C CNN
-F 1 "GND" H 3190 3340 50  0000 R CNN
-F 2 "" H 3030 3280 50  0001 C CNN
-F 3 "" H 3030 3280 50  0001 C CNN
-	1    3030 3280
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3030 3280 2700 3280
 Wire Wire Line
 	7270 4530 7270 4480
 Wire Wire Line
@@ -611,4 +598,101 @@ Wire Wire Line
 	7210 2990 7300 2990
 Wire Wire Line
 	7300 2990 7300 3040
+Text Notes 7050 7020 0    60   ~ 0
+(C) Roman Valls Guimera (brainstorm at nopcode dot org)
+$Comp
+L GND #PWR?
+U 1 1 5BC3827A
+P 1690 4410
+F 0 "#PWR?" H 1690 4160 50  0001 C CNN
+F 1 "GND" H 1695 4237 50  0000 C CNN
+F 2 "" H 1690 4410 50  0001 C CNN
+F 3 "" H 1690 4410 50  0001 C CNN
+	1    1690 4410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1860 4330 1690 4330
+Wire Wire Line
+	1690 4330 1690 4410
+Wire Wire Line
+	1860 4210 1690 4210
+Wire Wire Line
+	1690 4210 1690 4120
+$Comp
+L +5V #PWR?
+U 1 1 5BC389B7
+P 1690 4120
+F 0 "#PWR?" H 1690 3970 50  0001 C CNN
+F 1 "+5V" H 1705 4293 50  0000 C CNN
+F 2 "" H 1690 4120 50  0001 C CNN
+F 3 "" H 1690 4120 50  0001 C CNN
+	1    1690 4120
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BC444DB
+P 1700 3510
+F 0 "#PWR?" H 1700 3260 50  0001 C CNN
+F 1 "GND" H 1705 3337 50  0000 C CNN
+F 2 "" H 1700 3510 50  0001 C CNN
+F 3 "" H 1700 3510 50  0001 C CNN
+	1    1700 3510
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1860 3400 1700 3400
+Wire Wire Line
+	1700 3400 1700 3510
+Wire Wire Line
+	1860 3290 1700 3290
+Wire Wire Line
+	1700 3290 1700 3140
+Text GLabel 2790 4010 2    60   Input ~ 0
+ETH_EGRESS_LED
+Text GLabel 2790 4150 2    60   Input ~ 0
+ETH_INGRESS_LED
+Wire Wire Line
+	2790 4010 2700 4010
+Wire Wire Line
+	2700 4150 2790 4150
+Text GLabel 7160 3630 2    60   Input ~ 0
+ETH_EGRESS_LED
+Text GLabel 7160 3730 2    60   Input ~ 0
+ETH_INGRESS_LED
+$Comp
+L +3V3 #PWR?
+U 1 1 5BC46C2B
+P 1700 3140
+F 0 "#PWR?" H 1700 2990 50  0001 C CNN
+F 1 "+3V3" H 1715 3313 50  0000 C CNN
+F 2 "" H 1700 3140 50  0001 C CNN
+F 3 "" H 1700 3140 50  0001 C CNN
+	1    1700 3140
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5BC46E95
+P 4190 1950
+F 0 "#PWR?" H 4190 1800 50  0001 C CNN
+F 1 "+3V3" H 4205 2123 50  0000 C CNN
+F 2 "" H 4190 1950 50  0001 C CNN
+F 3 "" H 4190 1950 50  0001 C CNN
+	1    4190 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4580 1870 4580 2110
+Wire Wire Line
+	4580 2110 4190 2110
+Wire Wire Line
+	4190 2110 4190 1950
+NoConn ~ 8930 3830
+NoConn ~ 8930 3730
+NoConn ~ 7160 4330
+NoConn ~ 8430 4430
+Text Notes 630  2740 0    60   ~ 0
+XXX: Add decoupling caps on power rails as shown in\nlaf0rge minipcie schematic:\n\nhttps://osmocom.org/projects/mpcie-breakout/wiki
 $EndSCHEMATC

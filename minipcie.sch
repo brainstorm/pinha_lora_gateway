@@ -32,12 +32,15 @@ LIBS:win
 LIBS:freetronics_schematic
 LIBS:mpcie
 LIBS:si3406
+LIBS:si3404
+LIBS:SI-52003-F
+LIBS:ap2112
 LIBS:minipcie-eth-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -85,7 +88,7 @@ NoConn ~ 4590 4030
 NoConn ~ 4590 3930
 NoConn ~ 4590 3130
 NoConn ~ 4590 3230
-Text Notes 7030 6990 0    60   ~ 0
+Text Notes 7010 6940 0    60   ~ 0
 Pins mapped according to n-fuse datasheet: \nhttps://www.n-fuse.co/products/lrwccx/lrwccx-mpcie-datasheet.pdf\n\nMiniPICe (reserved) SPI pins according to RAK833 datasheet.
 Text HLabel 5440 2380 1    60   Input ~ 0
 TX_LED
@@ -103,13 +106,13 @@ Text HLabel 6130 2430 1    60   Input ~ 0
 SWD_CLK
 Text HLabel 2580 3050 1    60   Input ~ 0
 GPS_PPS
-Text HLabel 2960 1920 1    60   Input ~ 0
+Text HLabel 2990 1920 1    60   Input ~ 0
 SPI_CLK
 Text HLabel 3090 1920 1    60   Input ~ 0
 SPI_MISO
-Text HLabel 3210 1920 1    60   Input ~ 0
+Text HLabel 3190 1920 1    60   Input ~ 0
 SPI_MOSI
-Text HLabel 3330 1920 1    60   Input ~ 0
+Text HLabel 3290 1920 1    60   Input ~ 0
 SPI_CS
 Wire Wire Line
 	4590 3630 4820 3630
@@ -118,7 +121,17 @@ Wire Wire Line
 Wire Wire Line
 	4590 3030 5630 3030
 Wire Wire Line
-	5630 3030 5630 6350
+	5630 3030 5630 3530
+Wire Wire Line
+	5630 3530 5630 3830
+Wire Wire Line
+	5630 3830 5630 4230
+Wire Wire Line
+	5630 4230 5630 4630
+Wire Wire Line
+	5630 4630 5630 5430
+Wire Wire Line
+	5630 5430 5630 6350
 Wire Wire Line
 	5630 5430 4590 5430
 Wire Wire Line
@@ -136,7 +149,21 @@ Connection ~ 5630 3530
 Wire Wire Line
 	3290 3330 2390 3330
 Wire Wire Line
-	2390 3330 2390 6350
+	2390 3330 2390 3630
+Wire Wire Line
+	2390 3630 2390 3730
+Wire Wire Line
+	2390 3730 2390 4030
+Wire Wire Line
+	2390 4030 2390 4130
+Wire Wire Line
+	2390 4130 2390 4430
+Wire Wire Line
+	2390 4430 2390 4830
+Wire Wire Line
+	2390 4830 2390 5130
+Wire Wire Line
+	2390 5130 2390 6350
 Wire Wire Line
 	2390 5130 3290 5130
 Wire Wire Line
@@ -158,20 +185,30 @@ Wire Wire Line
 	3290 4830 2390 4830
 Connection ~ 2390 4830
 Wire Wire Line
-	2390 6350 5630 6350
+	2390 6350 3920 6350
+Wire Wire Line
+	3920 6350 5630 6350
 Connection ~ 5630 5430
 Connection ~ 2390 5130
 Wire Wire Line
 	3920 6350 3920 6440
 Connection ~ 3920 6350
 Wire Wire Line
-	2860 3530 3290 3530
+	2860 3530 3120 3530
+Wire Wire Line
+	3120 3530 3290 3530
 Wire Wire Line
 	2860 3530 2860 2220
 Wire Wire Line
-	2860 2220 4720 2220
+	2860 2220 3880 2220
 Wire Wire Line
-	4720 2220 4720 5530
+	3880 2220 4720 2220
+Wire Wire Line
+	4720 2220 4720 2930
+Wire Wire Line
+	4720 2930 4720 4330
+Wire Wire Line
+	4720 4330 4720 5530
 Wire Wire Line
 	4720 2930 4590 2930
 Wire Wire Line
@@ -225,23 +262,23 @@ Wire Wire Line
 Wire Wire Line
 	3290 2930 3290 2040
 Wire Wire Line
-	3290 2040 3330 2040
+	3290 2040 3290 2040
 Wire Wire Line
-	3330 2040 3330 1920
+	3290 2040 3290 1920
 Wire Wire Line
-	3290 3030 3210 3030
+	3290 3030 3190 3030
 Wire Wire Line
-	3210 3030 3210 1920
+	3190 3030 3190 1920
 Wire Wire Line
 	3290 3130 3090 3130
 Wire Wire Line
 	3090 3130 3090 1920
 Wire Wire Line
-	3290 3230 2960 3230
+	3290 3230 2990 3230
 Wire Wire Line
-	2960 3230 2960 1920
+	2990 3230 2990 1920
 Text Notes 3370 1300 2    60   ~ 0
-Those pins are reserved on the mpcie spec\nRAK833 LoRa GW uses them for SPI, perhaps\nothers will use the same?
-Text Notes 7260 2630 0    60   ~ 0
-XXX: Add decoupling capacitors as shown in\nlaf0rge minipcie schematic
+Those pins are reserved on the mpcie spec\nRAK833 LoRa GW uses them for SPI, perhaps\nothers like n-fuse will use the same in the future?
+Text Notes 7000 7100 0    60   ~ 0
+(C) Roman Valls Guimera (brainstorm at nopcode dot org)
 $EndSCHEMATC

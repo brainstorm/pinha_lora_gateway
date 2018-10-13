@@ -1,0 +1,8 @@
+ap2112
+
+Pin,Type,Name,Side
+1,power_in,VIN,left
+2,power,GND,left
+3,tristate,EN,left
+4,no_connect,ADJ_NC,right
+5,power_out,VOUT,right

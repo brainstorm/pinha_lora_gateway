@@ -1,4 +1,4 @@
-update=Saturday, 13 October 2018 'amt' 00:38:10
+update=Saturday, 13 October 2018 'pmt' 19:04:17
 version=1
 last_client=kicad
 [general]
@@ -64,3 +64,16 @@ LibName30=/Users/romanvg/dev/kicad_footprints/kicad-library-win/win
 LibName31=/Users/romanvg/dev/kicad_footprints/freetronics/freetronics_kicad_library/freetronics_schematic
 LibName32=/Users/romanvg/dev/kicad_footprints/kicad-mini-pci-express/mpcie
 LibName33=kipart/si3406
+LibName34=kipart/si3404
+LibName35=snapeda/SI-52003-F
+LibName36=kipart/ap2112
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=kipart/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
