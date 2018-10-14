@@ -78,12 +78,6 @@ F10 "3V3+_POE" I L 1860 3290 60
 F11 "3V3-_POE" I L 1860 3400 60 
 $EndSheet
 $Sheet
-S 1150 6140 1550 1200
-U 5BAF0F57
-F0 "sdcard" 60
-F1 "sdcard.sch" 60
-$EndSheet
-$Sheet
 S 4510 1050 2510 820 
 U 5BAF0FB4
 F0 "minipcie" 60
@@ -302,7 +296,7 @@ Wire Wire Line
 Wire Wire Line
 	8040 3830 7160 3830
 Wire Wire Line
-	8930 4330 9050 4330
+	9050 4330 8930 4330
 Wire Wire Line
 	9050 4610 9050 4330
 Wire Wire Line
@@ -350,49 +344,29 @@ Wire Wire Line
 Wire Wire Line
 	5860 5380 5860 5950
 Wire Wire Line
-	4260 4680 1790 4680
+	5660 5610 5660 5380
 Wire Wire Line
-	1790 4680 1790 6080
+	2160 5610 5660 5610
 Wire Wire Line
-	4260 4780 1880 4780
+	5560 5690 5560 5380
 Wire Wire Line
-	1880 4780 1880 6060
+	2160 5690 5560 5690
 Wire Wire Line
-	5660 5380 5660 5840
+	5460 6010 5460 5380
 Wire Wire Line
-	5660 5840 2600 5840
+	2160 6010 5460 6010
 Wire Wire Line
-	2600 5840 2600 6080
+	5360 5920 5360 5380
 Wire Wire Line
-	5560 5380 5560 5780
+	2160 5920 5360 5920
 Wire Wire Line
-	5560 5780 2510 5780
+	5260 5450 5260 5380
 Wire Wire Line
-	2510 5780 2510 6080
+	2160 5450 5260 5450
 Wire Wire Line
-	5460 5380 5460 5730
+	5160 5530 5160 5380
 Wire Wire Line
-	5460 5730 2430 5730
-Wire Wire Line
-	2430 5730 2430 6080
-Wire Wire Line
-	5360 5380 5360 5670
-Wire Wire Line
-	5360 5670 2370 5670
-Wire Wire Line
-	2370 5670 2370 6090
-Wire Wire Line
-	5260 5380 5260 5600
-Wire Wire Line
-	5260 5600 2300 5600
-Wire Wire Line
-	2300 5600 2300 6080
-Wire Wire Line
-	5160 5380 5160 5530
-Wire Wire Line
-	5160 5530 2220 5530
-Wire Wire Line
-	2220 5530 2220 6080
+	2160 5530 5160 5530
 Wire Wire Line
 	2700 3480 4260 3480
 Wire Wire Line
@@ -478,8 +452,8 @@ Wire Wire Line
 	6160 2230 6560 2230
 Wire Wire Line
 	6560 2230 6560 1870
-Text Notes 2770 6740 0    60   ~ 0
-XXX: Can we avoid having to use external SD \ncard by compiling small enough OpenWRT \nthat just fits inside the VoCore2 memory?\n\nLess power consumption and less filesystem errors.
+Text Notes 1440 7310 0    60   ~ 0
+XXX: Can we just avoid having to use external SD \ncard by compiling small enough OpenWRT \nthat just fits inside the VoCore2 memory?\n\nLess power consumption and less filesystem errors.\n\nAlternatively, use read read-only filesystem \nand switch off power to it via mosfet+gpio or simple PMIC.
 Text Notes 7580 2490 0    60   ~ 0
 XXX: Review reset state for those two lines.\npull-up/pull-down accordingly.
 $Comp
@@ -695,4 +669,17 @@ NoConn ~ 7160 4330
 NoConn ~ 8430 4430
 Text Notes 630  2740 0    60   ~ 0
 XXX: Add decoupling caps on power rails as shown in\nlaf0rge minipcie schematic:\n\nhttps://osmocom.org/projects/mpcie-breakout/wiki
+$Sheet
+S 1440 5320 720  1060
+U 5BAF0F57
+F0 "sdcard" 60
+F1 "sdcard.sch" 60
+F2 "SD_D0" I R 2160 5450 60 
+F3 "SD_D1" I R 2160 5530 60 
+F4 "SD_D2" I R 2160 5610 60 
+F5 "SD_D3" I R 2160 5690 60 
+F6 "SD_CMD" I R 2160 6010 60 
+F7 "SD_CLK" I R 2160 5920 60 
+F8 "SD_VDD" I R 2160 6260 60 
+$EndSheet
 $EndSCHEMATC
