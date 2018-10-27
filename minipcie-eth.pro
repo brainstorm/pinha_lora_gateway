@@ -1,4 +1,4 @@
-update=Saturday, 13 October 2018 'pmt' 19:04:17
+update=Monday, 15 October 2018 'amt' 09:51:53
 version=1
 last_client=kicad
 [general]
@@ -70,10 +70,10 @@ LibName36=kipart/ap2112
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=kipart/
+PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
 LabSize=60
 ERC_TestSimilarLabels=1

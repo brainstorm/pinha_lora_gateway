@@ -51,12 +51,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MPCIE-Socket U?
+L MPCIE-Socket U4
 U 1 1 5BB36495
 P 3940 4080
-F 0 "U?" H 3940 5517 60  0000 C CNN
+F 0 "U4" H 3940 5517 60  0000 C CNN
 F 1 "MPCIE-Socket" H 3940 5411 60  0000 C CNN
-F 2 "" H 4040 3080 60  0000 C CNN
+F 2 "mpcie:mpcie-socket" H 4040 3080 60  0001 C CNN
 F 3 "" H 4040 3080 60  0000 C CNN
 	1    3940 4080
 	1    0    0    -1  
@@ -121,17 +121,7 @@ Wire Wire Line
 Wire Wire Line
 	4590 3030 5630 3030
 Wire Wire Line
-	5630 3030 5630 3530
-Wire Wire Line
-	5630 3530 5630 3830
-Wire Wire Line
-	5630 3830 5630 4230
-Wire Wire Line
-	5630 4230 5630 4630
-Wire Wire Line
-	5630 4630 5630 5430
-Wire Wire Line
-	5630 5430 5630 6350
+	5630 3030 5630 6350
 Wire Wire Line
 	5630 5430 4590 5430
 Wire Wire Line
@@ -149,21 +139,7 @@ Connection ~ 5630 3530
 Wire Wire Line
 	3290 3330 2390 3330
 Wire Wire Line
-	2390 3330 2390 3630
-Wire Wire Line
-	2390 3630 2390 3730
-Wire Wire Line
-	2390 3730 2390 4030
-Wire Wire Line
-	2390 4030 2390 4130
-Wire Wire Line
-	2390 4130 2390 4430
-Wire Wire Line
-	2390 4430 2390 4830
-Wire Wire Line
-	2390 4830 2390 5130
-Wire Wire Line
-	2390 5130 2390 6350
+	2390 3330 2390 6350
 Wire Wire Line
 	2390 5130 3290 5130
 Wire Wire Line
@@ -185,30 +161,20 @@ Wire Wire Line
 	3290 4830 2390 4830
 Connection ~ 2390 4830
 Wire Wire Line
-	2390 6350 3920 6350
-Wire Wire Line
-	3920 6350 5630 6350
+	2390 6350 5630 6350
 Connection ~ 5630 5430
 Connection ~ 2390 5130
 Wire Wire Line
 	3920 6350 3920 6440
 Connection ~ 3920 6350
 Wire Wire Line
-	2860 3530 3120 3530
-Wire Wire Line
-	3120 3530 3290 3530
+	2860 3530 3290 3530
 Wire Wire Line
 	2860 3530 2860 2220
 Wire Wire Line
-	2860 2220 3880 2220
+	2860 2220 4720 2220
 Wire Wire Line
-	3880 2220 4720 2220
-Wire Wire Line
-	4720 2220 4720 2930
-Wire Wire Line
-	4720 2930 4720 4330
-Wire Wire Line
-	4720 4330 4720 5530
+	4720 2220 4720 5530
 Wire Wire Line
 	4720 2930 4590 2930
 Wire Wire Line
@@ -260,11 +226,7 @@ Wire Wire Line
 Wire Wire Line
 	2580 5330 2580 3050
 Wire Wire Line
-	3290 2930 3290 2040
-Wire Wire Line
-	3290 2040 3290 2040
-Wire Wire Line
-	3290 2040 3290 1920
+	3290 1920 3290 2930
 Wire Wire Line
 	3290 3030 3190 3030
 Wire Wire Line
