@@ -56,7 +56,7 @@ U 1 1 5BC4BC19
 P 5180 2740
 F 0 "J3" H 5130 1923 50  0000 C CNN
 F 1 "Micro_SD" H 5130 2014 50  0000 C CNN
-F 2 "KiCad/Connect.pretty:SD_Card_Receptacle" H 7230 3440 50  0001 C CNN
+F 2 "KiCad/Connect.pretty:microSD_Card_Receptacle_Wuerth_693072010801" H 7230 3440 50  0001 C CNN
 F 3 "" H 5180 2840 50  0001 C CNN
 	1    5180 2740
 	-1   0    0    1   
@@ -105,63 +105,8 @@ F 3 "" H 4220 2290 50  0001 C CNN
 	1    4220 2290
 	1    0    0    -1  
 $EndComp
-$Comp
-L Micro_SD_Card_Det J4
-U 1 1 5BC34ECF
-P 5180 4850
-F 0 "J4" H 5130 4033 50  0000 C CNN
-F 1 "SD" H 5130 4124 50  0000 C CNN
-F 2 "KiCad/Connect.pretty:microSD_Card_Receptacle_Wuerth_693072010801" H 7230 5550 50  0001 C CNN
-F 3 "" H 5180 4950 50  0001 C CNN
-	1    5180 4850
-	-1   0    0    1   
-$EndComp
-Text HLabel 6080 4650 2    60   Input ~ 0
-SD_D0
-Text HLabel 6080 4550 2    60   Input ~ 0
-SD_D1
-Text HLabel 6080 5250 2    60   Input ~ 0
-SD_D2
-Text HLabel 6080 5150 2    60   Input ~ 0
-SD_D3
-Text HLabel 6080 5050 2    60   Input ~ 0
-SD_CMD
-Text HLabel 6080 4850 2    60   Input ~ 0
-SD_CLK
-Wire Wire Line
-	6080 4750 6770 4750
-Wire Wire Line
-	6770 4750 6770 4850
-$Comp
-L GND #PWR018
-U 1 1 5BC34EE0
-P 6770 4850
-F 0 "#PWR018" H 6770 4600 50  0001 C CNN
-F 1 "GND" H 6775 4677 50  0000 C CNN
-F 2 "" H 6770 4850 50  0001 C CNN
-F 3 "" H 6770 4850 50  0001 C CNN
-	1    6770 4850
-	1    0    0    -1  
-$EndComp
-Text HLabel 6080 4950 2    60   Input ~ 0
-SD_VDD
-Wire Wire Line
-	4380 4350 4220 4350
-Wire Wire Line
-	4220 4350 4220 4400
-$Comp
-L GND #PWR019
-U 1 1 5BC34EE9
-P 4220 4400
-F 0 "#PWR019" H 4220 4150 50  0001 C CNN
-F 1 "GND" H 4225 4227 50  0000 C CNN
-F 2 "" H 4220 4400 50  0001 C CNN
-F 3 "" H 4220 4400 50  0001 C CNN
-	1    4220 4400
-	1    0    0    -1  
-$EndComp
 Text Notes 7020 6790 0    60   ~ 0
-Overlay of SD and microSD footprints to give (backwards compatible) options \nto the consumer.
+Only microSD.\n
 Text Notes 7010 7030 0    60   ~ 0
 (C) Roman Valls Guimera (brainstorm at nopcode dot org)
 $EndSCHEMATC

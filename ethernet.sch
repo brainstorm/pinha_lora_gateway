@@ -175,7 +175,7 @@ L CP1_Small C8
 U 1 1 5BC19871
 P 7280 2280
 F 0 "C8" H 7371 2326 50  0000 L CNN
-F 1 "560uF" H 7371 2235 50  0000 L CNN
+F 1 "560uF/6.3V" H 7371 2235 50  0000 L CNN
 F 2 "KiCad/Capacitors_ThroughHole.pretty:CP_Radial_D8.0mm_P3.50mm" H 7280 2280 50  0001 C CNN
 F 3 "" H 7280 2280 50  0001 C CNN
 	1    7280 2280
@@ -680,4 +680,6 @@ F 3 "" H 8830 2500 50  0001 C CNN
 	1    8830 2500
 	1    0    0    -1  
 $EndComp
+Text GLabel 5540 2720 3    60   Input ~ 0
+VSS
 $EndSCHEMATC
