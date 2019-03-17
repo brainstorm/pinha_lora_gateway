@@ -1,46 +1,10 @@
-EESchema Schematic File Version 3
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:win
-LIBS:freetronics_schematic
-LIBS:mpcie
-LIBS:si3406
-LIBS:si3404
-LIBS:SI-52003-F
-LIBS:ap2112
+EESchema Schematic File Version 4
 LIBS:minipcie-eth-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -63,7 +27,7 @@ Text HLabel 10570 2000 2    60   Input ~ 0
 Text HLabel 10570 2640 2    60   Input ~ 0
 5V-_POE
 $Comp
-L CP1_Small C1
+L device1:CP1_Small C1
 U 1 1 5BC0DD90
 P 2190 5390
 F 0 "C1" H 2281 5436 50  0000 L CNN
@@ -78,7 +42,7 @@ https://electronics.stackexchange.com/questions/206926/connecting-a-rj45-magjack
 Text Notes 1190 5800 0    60   ~ 0
 XXX: Place cap physically close to RJ45 CT pin
 $Comp
-L si3404 U2
+L si3404:si3404 U2
 U 1 1 5BC17319
 P 5350 4000
 F 0 "U2" H 6660 4380 60  0000 L CNN
@@ -89,7 +53,7 @@ F 3 "" H 5350 4000 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SI-52003-F X1
+L SI-52003-F:SI-52003-F X1
 U 1 1 5BC18029
 P 1430 4240
 F 0 "X1" H 1130 5220 50  0000 L CNN
@@ -105,7 +69,7 @@ F 8 "380-1119-ND" H 1430 4240 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L L_Small L1
+L device1:L_Small L1
 U 1 1 5BC189F7
 P 3590 5290
 F 0 "L1" V 3412 5290 50  0000 C CNN
@@ -116,7 +80,7 @@ F 3 "" H 3590 5290 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L L_Small L2
+L device1:L_Small L2
 U 1 1 5BC18B6D
 P 3780 2000
 F 0 "L2" V 3602 2000 50  0000 C CNN
@@ -127,7 +91,7 @@ F 3 "" H 3780 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C3
+L device1:C_Small C3
 U 1 1 5BC18F02
 P 4220 2350
 F 0 "C3" H 4312 2396 50  0000 L CNN
@@ -138,7 +102,7 @@ F 3 "" H 4220 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1_Small C5
+L device1:CP1_Small C5
 U 1 1 5BC1936F
 P 5000 2350
 F 0 "C5" H 5091 2396 50  0000 L CNN
@@ -149,7 +113,7 @@ F 3 "" H 5000 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Schottky D1
+L device1:D_Schottky D1
 U 1 1 5BC194B5
 P 6300 2450
 F 0 "D1" V 6254 2529 50  0000 L CNN
@@ -160,7 +124,7 @@ F 3 "" H 6300 2450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L L_Small L3
+L device1:L_Small L3
 U 1 1 5BC197D4
 P 6870 2640
 F 0 "L3" V 6692 2640 50  0000 C CNN
@@ -171,7 +135,7 @@ F 3 "" H 6870 2640 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CP1_Small C8
+L device1:CP1_Small C8
 U 1 1 5BC19871
 P 7280 2280
 F 0 "C8" H 7371 2326 50  0000 L CNN
@@ -182,7 +146,7 @@ F 3 "" H 7280 2280 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R8
+L device1:R_Small R8
 U 1 1 5BC199BE
 P 8280 2190
 F 0 "R8" H 8339 2236 50  0000 L CNN
@@ -193,7 +157,7 @@ F 3 "" H 8280 2190 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R9
+L device1:R_Small R9
 U 1 1 5BC19AB8
 P 8280 2490
 F 0 "R9" H 8339 2536 50  0000 L CNN
@@ -204,7 +168,7 @@ F 3 "" H 8280 2490 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C10
+L device1:C_Small C10
 U 1 1 5BC19C18
 P 9270 2380
 F 0 "C10" H 9362 2426 50  0000 L CNN
@@ -215,7 +179,7 @@ F 3 "" H 9270 2380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L L_Small FB1
+L device1:L_Small FB1
 U 1 1 5BC1A2D1
 P 7740 2640
 F 0 "FB1" V 7562 2640 50  0000 C CNN
@@ -226,7 +190,7 @@ F 3 "" H 7740 2640 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Small R7
+L device1:R_Small R7
 U 1 1 5BC1A6A2
 P 6500 5020
 F 0 "R7" H 6559 5066 50  0000 L CNN
@@ -237,7 +201,7 @@ F 3 "" H 6500 5020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R6
+L device1:R_Small R6
 U 1 1 5BC1A74D
 P 6400 5010
 F 0 "R6" H 6300 5200 50  0000 L CNN
@@ -248,7 +212,7 @@ F 3 "" H 6400 5010 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R5
+L device1:R_Small R5
 U 1 1 5BC1A7B2
 P 5660 5020
 F 0 "R5" H 5719 5066 50  0000 L CNN
@@ -261,7 +225,7 @@ $EndComp
 Text Notes 7000 6780 0    60   ~ 0
 SiLabs 3404 non-isolated class 2 PD POE.\nOptimizing for BOM price and size for now.
 $Comp
-L C_Small C2
+L device1:C_Small C2
 U 1 1 5BC1DB08
 P 3950 4230
 F 0 "C2" H 3740 4310 50  0000 L CNN
@@ -272,7 +236,7 @@ F 3 "" H 3950 4230 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Bridge_+-AA D5
+L minipcie-eth-rescue:D_Bridge_+-AA D5
 U 1 1 5BC20810
 P 2900 3790
 F 0 "D5" H 3241 3836 50  0000 L CNN
@@ -283,7 +247,7 @@ F 3 "" H 2900 3790 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Bridge_+-AA D4
+L minipcie-eth-rescue:D_Bridge_+-AA D4
 U 1 1 5BC20875
 P 2890 4600
 F 0 "D4" H 3231 4646 50  0000 L CNN
@@ -294,7 +258,7 @@ F 3 "" H 2890 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R3
+L device1:R_Small R3
 U 1 1 5BC26899
 P 4220 3640
 F 0 "R3" H 4279 3686 50  0000 L CNN
@@ -305,7 +269,7 @@ F 3 "" H 4220 3640 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R10
+L device1:R_Small R10
 U 1 1 5BC29870
 P 10150 2340
 F 0 "R10" H 10209 2386 50  0000 L CNN
@@ -316,7 +280,7 @@ F 3 "" H 10150 2340 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R4
+L device1:R_Small R4
 U 1 1 5BC2BA83
 P 4510 4740
 F 0 "R4" H 4569 4786 50  0000 L CNN
@@ -327,7 +291,7 @@ F 3 "" H 4510 4740 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C4
+L device1:C_Small C4
 U 1 1 5BC2BAFC
 P 4510 4340
 F 0 "C4" H 4602 4386 50  0000 L CNN
@@ -338,7 +302,7 @@ F 3 "" H 4510 4340 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C6
+L device1:C_Small C6
 U 1 1 5BC2BB7A
 P 5160 4500
 F 0 "C6" H 5252 4546 50  0000 L CNN
@@ -556,7 +520,7 @@ Wire Wire Line
 	3030 5640 3030 5290
 Connection ~ 3030 5290
 $Comp
-L R_Small R2
+L device1:R_Small R2
 U 1 1 5BC3CB58
 P 1350 3280
 F 0 "R2" V 1430 3260 50  0000 C CNN
@@ -567,7 +531,7 @@ F 3 "" H 1350 3280 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Small R1
+L device1:R_Small R1
 U 1 1 5BC3CBE8
 P 1350 3120
 F 0 "R1" V 1160 3100 50  0000 C CNN
@@ -618,7 +582,7 @@ Wire Wire Line
 Wire Wire Line
 	2010 4040 1830 4040
 $Comp
-L ap2112 U3
+L ap2112:ap2112 U3
 U 1 1 5BC42283
 P 9440 3950
 F 0 "U3" H 10270 3460 60  0000 C CNN
@@ -670,7 +634,7 @@ Connection ~ 5000 2720
 Wire Wire Line
 	8830 2400 8830 2340
 $Comp
-L C_Small C9
+L device1:C_Small C9
 U 1 1 5BC19B48
 P 8830 2500
 F 0 "C9" H 8922 2546 50  0000 L CNN
