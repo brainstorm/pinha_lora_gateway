@@ -1,6 +1,42 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 3
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:win
+LIBS:freetronics_schematic
+LIBS:mpcie
+LIBS:si3406
+LIBS:si3404
+LIBS:SI-52003-F
+LIBS:ap2112
 LIBS:minipcie-eth-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +51,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L minipcie-eth-rescue:VoCore_v2-win U1
+L VoCore_v2 U1
 U 1 1 5BAF0D89
 P 5710 3930
 F 0 "U1" H 6820 5140 50  0000 C CNN
@@ -63,7 +99,7 @@ F15 "SPI_MOSI" I B 5240 1870 60
 F16 "SPI_CS" I B 4920 1870 60 
 $EndSheet
 $Comp
-L minipcie-eth-rescue:Conn_01x04 J1
+L Conn_01x04 J1
 U 1 1 5BAF1493
 P 3770 4370
 F 0 "J1" H 3890 4560 50  0000 C CNN
@@ -74,7 +110,7 @@ F 3 "" H 3770 4370 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power1:GND #PWR01
+L GND #PWR01
 U 1 1 5BAF1546
 P 6520 5530
 F 0 "#PWR01" H 6520 5280 50  0001 C CNN
@@ -85,7 +121,18 @@ F 3 "" H 6520 5530 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:GND #PWR04
+L GND #PWR03
+U 1 1 5BAF158B
+P 8120 4740
+F 0 "#PWR03" H 8120 4490 50  0001 C CNN
+F 1 "GND" H 8125 4567 50  0000 C CNN
+F 2 "" H 8120 4740 50  0001 C CNN
+F 3 "" H 8120 4740 50  0001 C CNN
+	1    8120 4740
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
 U 1 1 5BAF15B1
 P 4830 2440
 F 0 "#PWR04" H 4830 2190 50  0001 C CNN
@@ -96,7 +143,7 @@ F 3 "" H 4830 2440 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:+5V #PWR05
+L +5V #PWR05
 U 1 1 5BAF166D
 P 6160 5530
 F 0 "#PWR05" H 6160 5380 50  0001 C CNN
@@ -106,8 +153,20 @@ F 3 "" H 6160 5530 50  0001 C CNN
 	1    6160 5530
 	-1   0    0    1   
 $EndComp
+NoConn ~ 7160 4630
 $Comp
-L power1:+5V #PWR06
+L Conn_02x08_Odd_Even J2
+U 1 1 5BAF1E64
+P 8630 4030
+F 0 "J2" H 8680 4547 50  0000 C CNN
+F 1 "GPIO" H 8680 4456 50  0000 C CNN
+F 2 "KiCad/Pin_Headers.pretty:Pin_Header_Straight_2x08_Pitch2.54mm" H 8630 4030 50  0001 C CNN
+F 3 "" H 8630 4030 50  0001 C CNN
+	1    8630 4030
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR06
 U 1 1 5BAF2AC1
 P 3970 4470
 F 0 "#PWR06" H 3970 4320 50  0001 C CNN
@@ -118,7 +177,7 @@ F 3 "" H 3970 4470 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power1:GND #PWR07
+L GND #PWR07
 U 1 1 5BAF2AD4
 P 3970 4170
 F 0 "#PWR07" H 3970 3920 50  0001 C CNN
@@ -136,8 +195,8 @@ NoConn ~ 4260 4480
 NoConn ~ 4260 4580
 NoConn ~ 4260 3380
 NoConn ~ 5760 5380
-Text Notes 7670 3470 0    60   ~ 0
-PINS 39, 40, 41 can be used as \nETH PHY LED GPIOs according\nto Mediatek 7688AN datasheet
+Text Notes 8440 3360 0    60   ~ 0
+PINS 39, 40, 41 are \nETH PHY LED GPIOs \naccording\nto Mediatek 7688AN\ndatasheet
 Text Notes 4580 3020 0    60   ~ 0
 100mA max
 Text Notes 9640 6810 2    60   ~ 0
@@ -155,16 +214,86 @@ Wire Wire Line
 Wire Wire Line
 	6160 5380 6160 5530
 Wire Wire Line
-	6260 5380 6360 5380
+	6260 5380 6520 5380
 Wire Wire Line
 	6520 5380 6520 5530
 Connection ~ 6360 5380
 Wire Wire Line
-	5160 2300 5160 2390
+	5160 2300 5160 2480
 Wire Wire Line
 	5160 2390 4830 2390
 Wire Wire Line
 	4830 2390 4830 2440
+Wire Wire Line
+	7160 4430 7160 4530
+Wire Wire Line
+	7270 4530 8240 4530
+Wire Wire Line
+	8240 4530 8240 4610
+Wire Wire Line
+	8240 4610 9050 4610
+Wire Wire Line
+	8930 4610 8930 4430
+Wire Wire Line
+	7160 4230 7310 4230
+Wire Wire Line
+	7310 4230 7310 4330
+Wire Wire Line
+	7310 4330 8430 4330
+Wire Wire Line
+	7160 4130 7390 4130
+Wire Wire Line
+	7390 4130 7390 4230
+Wire Wire Line
+	7390 4230 8430 4230
+Wire Wire Line
+	7160 4030 8430 4030
+Wire Wire Line
+	8430 3930 8120 3930
+Wire Wire Line
+	8120 3930 8120 4740
+Connection ~ 8120 4530
+Wire Wire Line
+	8430 4130 8180 4130
+Wire Wire Line
+	8180 4130 8180 4530
+Connection ~ 8180 4530
+Wire Wire Line
+	8430 3830 8080 3830
+Wire Wire Line
+	8080 3830 8080 3930
+Wire Wire Line
+	8080 3930 7160 3930
+Wire Wire Line
+	8430 3730 8040 3730
+Wire Wire Line
+	8040 3730 8040 3830
+Wire Wire Line
+	8040 3830 7160 3830
+Wire Wire Line
+	9050 4330 8930 4330
+Wire Wire Line
+	9050 4610 9050 4030
+Connection ~ 8930 4610
+Wire Wire Line
+	7160 3530 7620 3530
+Wire Wire Line
+	7620 3530 7620 3440
+Wire Wire Line
+	7620 3440 9100 3440
+Wire Wire Line
+	9100 3440 9100 3930
+Wire Wire Line
+	9100 3930 8930 3930
+Wire Wire Line
+	9050 4230 8930 4230
+Connection ~ 9050 4330
+Wire Wire Line
+	9050 4130 8930 4130
+Connection ~ 9050 4230
+Wire Wire Line
+	9050 4030 8930 4030
+Connection ~ 9050 4130
 Wire Wire Line
 	7160 3330 7470 3330
 Wire Wire Line
@@ -271,7 +400,7 @@ Wire Wire Line
 Text Notes 7580 2490 0    60   ~ 0
 XXX: Review reset state for those two lines.\npull-up/pull-down accordingly.
 $Comp
-L device1:LED_Small_ALT D9
+L LED_Small_ALT D9
 U 1 1 5BB77A38
 P 3480 2400
 F 0 "D9" V 3526 2332 50  0000 R CNN
@@ -282,7 +411,7 @@ F 3 "" V 3480 2400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device1:LED_Small_ALT D2
+L LED_Small_ALT D2
 U 1 1 5BB77A74
 P 3740 2390
 F 0 "D2" V 3786 2322 50  0000 R CNN
@@ -293,7 +422,7 @@ F 3 "" V 3740 2390 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device1:LED_Small_ALT D3
+L LED_Small_ALT D3
 U 1 1 5BB77AA6
 P 3990 2400
 F 0 "D3" V 4036 2332 50  0000 R CNN
@@ -304,7 +433,7 @@ F 3 "" V 3990 2400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device1:R_Network04 RN1
+L R_Network04 RN1
 U 1 1 5BB77E7E
 P 3580 2830
 F 0 "RN1" H 3300 2784 50  0000 R CNN
@@ -315,7 +444,7 @@ F 3 "" H 3580 2830 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power1:GND #PWR08
+L GND #PWR08
 U 1 1 5BB7822B
 P 3780 3030
 F 0 "#PWR08" H 3780 2780 50  0001 C CNN
@@ -362,8 +491,13 @@ Wire Wire Line
 Wire Wire Line
 	3580 2550 3580 2630
 NoConn ~ 3480 2630
+Wire Wire Line
+	7270 4530 7270 4480
+Wire Wire Line
+	7270 4480 7160 4480
+Connection ~ 7160 4480
 $Comp
-L power1:GND #PWR09
+L GND #PWR09
 U 1 1 5BC0D564
 P 7300 3040
 F 0 "#PWR09" H 7300 2790 50  0001 C CNN
@@ -384,7 +518,7 @@ Wire Wire Line
 Text Notes 7050 7020 0    60   ~ 0
 (C) Roman Valls Guimera (brainstorm at nopcode dot org)
 $Comp
-L power1:GND #PWR010
+L GND #PWR010
 U 1 1 5BC3827A
 P 1690 4410
 F 0 "#PWR010" H 1690 4160 50  0001 C CNN
@@ -403,7 +537,7 @@ Wire Wire Line
 Wire Wire Line
 	1690 4210 1690 4120
 $Comp
-L power1:+5V #PWR011
+L +5V #PWR011
 U 1 1 5BC389B7
 P 1690 4120
 F 0 "#PWR011" H 1690 3970 50  0001 C CNN
@@ -414,7 +548,7 @@ F 3 "" H 1690 4120 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:GND #PWR012
+L GND #PWR012
 U 1 1 5BC444DB
 P 1700 3510
 F 0 "#PWR012" H 1700 3260 50  0001 C CNN
@@ -445,7 +579,7 @@ ETH_EGRESS_LED
 Text GLabel 7160 3730 2    60   Input ~ 0
 ETH_INGRESS_LED
 $Comp
-L power1:+3V3 #PWR013
+L +3V3 #PWR013
 U 1 1 5BC46C2B
 P 1700 3140
 F 0 "#PWR013" H 1700 2990 50  0001 C CNN
@@ -456,7 +590,7 @@ F 3 "" H 1700 3140 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:+3V3 #PWR014
+L +3V3 #PWR014
 U 1 1 5BC46E95
 P 4190 1950
 F 0 "#PWR014" H 4190 1800 50  0001 C CNN
@@ -472,6 +606,10 @@ Wire Wire Line
 	4580 2110 4190 2110
 Wire Wire Line
 	4190 2110 4190 1950
+NoConn ~ 8930 3830
+NoConn ~ 8930 3730
+NoConn ~ 7160 4330
+NoConn ~ 8430 4430
 Text Notes 630  2740 0    60   ~ 0
 XXX: Add decoupling caps on power rails as shown in\nlaf0rge minipcie schematic:\n\nhttps://osmocom.org/projects/mpcie-breakout/wiki
 NoConn ~ 5660 5380
@@ -481,63 +619,4 @@ NoConn ~ 5360 5380
 NoConn ~ 5260 5380
 NoConn ~ 5160 5380
 NoConn ~ 5060 5380
-Wire Wire Line
-	6360 5380 6520 5380
-Wire Wire Line
-	5160 2390 5160 2480
-$Comp
-L power:VBUS #PWR?
-U 1 1 5C95EBC9
-P 8990 4580
-F 0 "#PWR?" H 8990 4430 50  0001 C CNN
-F 1 "VBUS" H 9005 4753 50  0000 C CNN
-F 2 "" H 8990 4580 50  0001 C CNN
-F 3 "" H 8990 4580 50  0001 C CNN
-	1    8990 4580
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x06_Top_Bottom J?
-U 1 1 5C96207F
-P 8690 4280
-F 0 "J?" H 8740 4697 50  0000 C CNN
-F 1 "POE PMOD" H 8740 4606 50  0000 C CNN
-F 2 "" H 8690 4280 50  0001 C CNN
-F 3 "~" H 8690 4280 50  0001 C CNN
-	1    8690 4280
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VBUS #PWR?
-U 1 1 5C9740EC
-P 8490 4580
-F 0 "#PWR?" H 8490 4430 50  0001 C CNN
-F 1 "VBUS" H 8505 4753 50  0000 C CNN
-F 2 "" H 8490 4580 50  0001 C CNN
-F 3 "" H 8490 4580 50  0001 C CNN
-	1    8490 4580
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GNDA #PWR?
-U 1 1 5C97B896
-P 8990 4480
-F 0 "#PWR?" H 8990 4230 50  0001 C CNN
-F 1 "GNDA" V 8995 4352 50  0000 R CNN
-F 2 "" H 8990 4480 50  0001 C CNN
-F 3 "" H 8990 4480 50  0001 C CNN
-	1    8990 4480
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GNDA #PWR?
-U 1 1 5C97C16E
-P 8490 4480
-F 0 "#PWR?" H 8490 4230 50  0001 C CNN
-F 1 "GNDA" V 8495 4353 50  0000 R CNN
-F 2 "" H 8490 4480 50  0001 C CNN
-F 3 "" H 8490 4480 50  0001 C CNN
-	1    8490 4480
-	0    1    1    0   
-$EndComp
 $EndSCHEMATC

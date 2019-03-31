@@ -1,6 +1,42 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 3
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:win
+LIBS:freetronics_schematic
+LIBS:mpcie
+LIBS:si3406
+LIBS:si3404
+LIBS:SI-52003-F
+LIBS:ap2112
 LIBS:minipcie-eth-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +51,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L minipcie-eth-rescue:MPCIE-Socket-mpcie U4
+L MPCIE-Socket U4
 U 1 1 5BB36495
 P 3940 4080
 F 0 "U4" H 3940 5517 60  0000 C CNN
@@ -85,7 +121,7 @@ Wire Wire Line
 Wire Wire Line
 	4590 3030 5630 3030
 Wire Wire Line
-	5630 3030 5630 3530
+	5630 3030 5630 6350
 Wire Wire Line
 	5630 5430 4590 5430
 Wire Wire Line
@@ -103,7 +139,7 @@ Connection ~ 5630 3530
 Wire Wire Line
 	3290 3330 2390 3330
 Wire Wire Line
-	2390 3330 2390 3630
+	2390 3330 2390 6350
 Wire Wire Line
 	2390 5130 3290 5130
 Wire Wire Line
@@ -125,20 +161,20 @@ Wire Wire Line
 	3290 4830 2390 4830
 Connection ~ 2390 4830
 Wire Wire Line
-	2390 6350 3920 6350
+	2390 6350 5630 6350
 Connection ~ 5630 5430
 Connection ~ 2390 5130
 Wire Wire Line
 	3920 6350 3920 6440
 Connection ~ 3920 6350
 Wire Wire Line
-	2860 3530 3120 3530
+	2860 3530 3290 3530
 Wire Wire Line
 	2860 3530 2860 2220
 Wire Wire Line
-	2860 2220 3880 2220
+	2860 2220 4720 2220
 Wire Wire Line
-	4720 2220 4720 2930
+	4720 2220 4720 5530
 Wire Wire Line
 	4720 2930 4590 2930
 Wire Wire Line
@@ -207,38 +243,4 @@ Text Notes 3370 1300 2    60   ~ 0
 Those pins are reserved on the mpcie spec\nRAK833 LoRa GW uses them for SPI, perhaps\nothers like n-fuse will use the same in the future?
 Text Notes 7000 7100 0    60   ~ 0
 (C) Roman Valls Guimera (brainstorm at nopcode dot org)
-Wire Wire Line
-	5630 4630 5630 5430
-Wire Wire Line
-	5630 4230 5630 4630
-Wire Wire Line
-	5630 3830 5630 4230
-Wire Wire Line
-	5630 3530 5630 3830
-Wire Wire Line
-	2390 3630 2390 3730
-Wire Wire Line
-	2390 3730 2390 4030
-Wire Wire Line
-	2390 4030 2390 4130
-Wire Wire Line
-	2390 4130 2390 4430
-Wire Wire Line
-	2390 4430 2390 4830
-Wire Wire Line
-	2390 4830 2390 5130
-Wire Wire Line
-	5630 5430 5630 6350
-Wire Wire Line
-	2390 5130 2390 6350
-Wire Wire Line
-	3920 6350 5630 6350
-Wire Wire Line
-	4720 2930 4720 4330
-Wire Wire Line
-	4720 4330 4720 5530
-Wire Wire Line
-	3120 3530 3290 3530
-Wire Wire Line
-	3880 2220 4720 2220
 $EndSCHEMATC
