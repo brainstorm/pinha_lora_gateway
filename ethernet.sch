@@ -15,13 +15,13 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text HLabel 1830 4540 2    60   Input ~ 0
-P0RN
+PORN
 Text HLabel 1830 4640 2    60   Input ~ 0
-P0RP
+PORP
 Text HLabel 1830 4940 2    60   Input ~ 0
-P0TP
+POTP
 Text HLabel 1830 4740 2    60   Input ~ 0
-P0TN
+POTN
 Text HLabel 10570 2000 2    60   Input ~ 0
 5V+_POE
 Text HLabel 10570 2640 2    60   Input ~ 0
@@ -236,9 +236,11 @@ F 3 "" H 3950 4230 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L minipcie-eth-rescue:D_Bridge_+-AA D5
+L minipcie-eth-rescue:D_Bridge_+-AA-minipcie-eth-rescue-minipcie-eth-rescue D5
 U 1 1 5BC20810
 P 2900 3790
+AR Path="/5BC20810" Ref="D5"  Part="1" 
+AR Path="/5BAF0E8B/5BC20810" Ref="D5"  Part="1" 
 F 0 "D5" H 3241 3836 50  0000 L CNN
 F 1 "VP/VN(1)" H 3241 3745 50  0000 L CNN
 F 2 "KiCad/Socket_Strips.pretty:Socket_Strip_Straight_2x02_Pitch2.00mm_SMD" H 2900 3790 50  0001 C CNN
@@ -247,9 +249,11 @@ F 3 "" H 2900 3790 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L minipcie-eth-rescue:D_Bridge_+-AA D4
+L minipcie-eth-rescue:D_Bridge_+-AA-minipcie-eth-rescue-minipcie-eth-rescue D4
 U 1 1 5BC20875
 P 2890 4600
+AR Path="/5BC20875" Ref="D4"  Part="1" 
+AR Path="/5BAF0E8B/5BC20875" Ref="D4"  Part="1" 
 F 0 "D4" H 3231 4646 50  0000 L CNN
 F 1 "VP/VN(2)" H 3231 4555 50  0000 L CNN
 F 2 "KiCad/Socket_Strips.pretty:Socket_Strip_Straight_2x02_Pitch2.00mm_SMD" H 2890 4600 50  0001 C CNN

@@ -15,9 +15,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L minipcie-eth-rescue:MPCIE-Socket-mpcie U4
+L minipcie-eth-rescue:MPCIE-Socket-mpcie-minipcie-eth-rescue-minipcie-eth-rescue U4
 U 1 1 5BB36495
 P 3940 4080
+AR Path="/5BB36495" Ref="U4"  Part="1" 
+AR Path="/5BAF0FB4/5BB36495" Ref="U4"  Part="1" 
 F 0 "U4" H 3940 5517 60  0000 C CNN
 F 1 "MPCIE-Socket" H 3940 5411 60  0000 C CNN
 F 2 "mpcie:mpcie-socket" H 4040 3080 60  0001 C CNN
