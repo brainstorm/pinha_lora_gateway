@@ -223,7 +223,7 @@ F 3 "" H 5660 5020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7000 6780 0    60   ~ 0
-SiLabs 3404 non-isolated class 2 PD POE.\nOptimizing for BOM price and size for now.
+SiLabs 3404 non-isolated class 2 PD POE based in reference design:\nhttps://www.silabs.com/documents/public/user-guides/ug324-si3404bkc2evb.pdf
 $Comp
 L device1:C_Small C2
 U 1 1 5BC1DB08
