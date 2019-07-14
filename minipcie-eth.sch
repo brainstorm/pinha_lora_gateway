@@ -394,7 +394,6 @@ Wire Wire Line
 	3410 5490 2770 5490
 Wire Wire Line
 	2770 5490 2770 5310
-Connection ~ 2770 5310
 Wire Wire Line
 	3410 5210 3510 5210
 Wire Wire Line
@@ -418,13 +417,6 @@ Wire Wire Line
 	2350 5210 2350 5590
 Connection ~ 2350 5210
 Wire Wire Line
-	1860 3400 1250 3400
-Wire Wire Line
-	1250 3400 1250 4330
-Wire Wire Line
-	1860 4330 1250 4330
-Connection ~ 1250 4330
-Wire Wire Line
 	1860 3290 1370 3290
 Wire Wire Line
 	1370 3290 1370 5110
@@ -436,10 +428,6 @@ Wire Wire Line
 	1470 4210 1470 5210
 Wire Wire Line
 	1470 5210 2350 5210
-Wire Wire Line
-	1250 5310 2770 5310
-Wire Wire Line
-	1250 4330 1250 5310
 NoConn ~ 4260 3080
 $Comp
 L power1:+5V #PWR0114
@@ -682,4 +670,16 @@ Wire Wire Line
 	8110 4230 8110 4300
 Wire Wire Line
 	8110 4300 8200 4300
+Connection ~ 2770 5310
+Wire Wire Line
+	1250 5310 2770 5310
+Wire Wire Line
+	1250 4330 1250 5310
+Wire Wire Line
+	1860 4330 1250 4330
+Connection ~ 1250 4330
+Wire Wire Line
+	1250 3400 1250 4330
+Wire Wire Line
+	1860 3400 1250 3400
 $EndSCHEMATC
